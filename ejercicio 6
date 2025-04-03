@@ -1,0 +1,33 @@
+class estudiante:
+    
+    def __init__(self,nombre,edad,carrera):
+        self.nombre=nombre
+        self.edad=edad
+        self.carrera=carrera
+    
+    def obtener_nombre(self):
+        return self.nombre
+    
+    def establecer_nombre(self,nombre):
+        self.nombre=nombre
+        
+    def obtener_edad(self):
+        return self.edad
+    
+    def establecer_edad(self,edad):
+        self.edad=edad
+    
+    def obtener_carrera(self):
+        return self.carrera
+    
+    def establecer_carrera(self,carrera):
+        self.carrera=carrera
+   
+    def promedio(self):
+        return 
+if __name__=="__main__":
+    estudiante1=estudiante("Gabriel",19,"programación")
+    print(f"Nombre: {estudiante1.obtener_nombre()} ")
+    print(f"Edad: {estudiante1.obtener_edad()}")
+    print(f"Carrera: {estudiante1.obtener_carrera()}")
+    print(f"Promedio examenes: {estudiante1.promedio()}")
