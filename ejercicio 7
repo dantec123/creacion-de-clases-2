@@ -1,0 +1,22 @@
+class banco:
+    def __init__(self,nombre,tasa_de_interes):
+        self.nombre=nombre
+        self.tasa_de_interes=tasa_de_interes
+    
+    def obtener_nombre(self):
+        return self.nombre
+    
+    def establecer_nombre(self,nombre):
+        self.nombre=nombre
+        
+    def obtener_tasa(self):
+        return self.tasa_de_interes
+    
+    def establecer_tasa(self,tasa_de_interes):
+        self.tasa_de_interes=tasa_de_interes
+    
+if __name__=="__main__":
+    banco1=banco("Banco ciudad",10)
+    print(f"Nombre: {banco1.obtener_nombre()}")
+    print(f"Tasa de interes: {banco1.obtener_tasa()}")
+    
