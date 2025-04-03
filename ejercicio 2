@@ -1,0 +1,29 @@
+class coche:
+    def __init__(self,marca,modelo,año_fabricacion):
+        self.marca=marca
+        self.modelo=modelo
+        self.año_fabricacion=año_fabricacion
+    
+    def obtener_marca(self):
+        return self.marca
+    
+    def establecer_marca(self,marca):
+        self.marca=marca
+    
+    def obtener_modelo(self):
+        return self.modelo
+    
+    def establecer_modelo(self,modelo):
+        self.modelo=modelo
+    
+    def obtener_año_fabricacion(self):
+        return self.año_fabricacion
+    
+    def establecer_año_fabricacion(self,año_fabricacion):
+        self.año_fabricacion=año_fabricacion
+    
+if __name__=="__main__":
+    coche1=coche("Ford",350,1998)
+    print(f"marca: {coche1.obtener_marca()}")
+    print(f"modelo: {coche1.obtener_modelo()}")
+    print(f"año_fabricacion: {coche1.obtener_año_fabricacion()} ")
