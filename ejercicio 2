@@ -1,9 +1,10 @@
 class coche:
     def __init__(self,marca,modelo,año_fabricacion):
+        
         self.marca=marca
         self.modelo=modelo
         self.año_fabricacion=año_fabricacion
-    
+        
     def obtener_marca(self):
         return self.marca
     
@@ -21,9 +22,11 @@ class coche:
     
     def establecer_año_fabricacion(self,año_fabricacion):
         self.año_fabricacion=año_fabricacion
-    
+    def año(self):
+        return 2025-self.año_fabricacion 
 if __name__=="__main__":
     coche1=coche("Ford",350,1998)
     print(f"marca: {coche1.obtener_marca()}")
     print(f"modelo: {coche1.obtener_modelo()}")
-    print(f"año_fabricacion: {coche1.obtener_año_fabricacion()} ")
+    print(f"año de fabricacion: {coche1.obtener_año_fabricacion()} ")
+    print(f"Pasaron {coche1.año()} desde que se fabrico el coche")
