@@ -1,0 +1,28 @@
+class circulo:
+    def __init__(self,radio,diametro):
+        self.radio=radio
+        self.diametro=diametro
+    
+    def obtener_radio(self):
+        return self.radio
+    
+    def establecer_radio(self,radio):
+        self.radio=radio
+    
+    def obtener_diametro(self):
+        return self.diametro
+    
+    def establecer_diametro(self,diametro):
+        self.diametro=diametro
+    
+    def area(self):
+        return 3.14159 *(self.radio**2)
+    
+    def circunferencia(self):
+        return 3.14159*self.diametro
+if __name__=="__main__":
+    circulo1=circulo(5,10)
+    print(f"Radio: {circulo1.obtener_radio()}")
+    print(f"Diametro: {circulo1.obtener_diametro()}")
+    print(f"Area: {circulo1.area()}")
+    print(f"Circunferencia: {circulo1.circunferencia()}")
