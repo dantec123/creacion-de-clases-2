@@ -1,0 +1,37 @@
+class producto:
+    def __init__(self,nombre,precio,stock_disponible):
+        self.nombre=nombre
+        self.precio=precio
+        self.stock_disponible=stock_disponible
+    
+    def obtener_nombre(self):
+        return self.nombre
+    
+    def establecer_nombre(self,nombre):
+        self.nombre=nombre
+    
+    def obtener_precio(self):
+        return self.precio
+    
+    def establecer_precio(self,precio):
+        self.precio=precio
+    def obtener_stock_disponible(self):
+        return self.stock_disponible
+    
+    def establecer_stock_disponible(self,stock_disponible):
+        self.stock_disponible=stock_disponible
+    def aumentar_stock(self):
+        return self.stock_disponible + 1
+    def disminuir_stock(self):
+        return self.stock_disponible -1
+if __name__=="__main__":
+    producto1=producto("celular",100,10)
+    print(f"Nombre del producto: {producto1.obtener_nombre()}")
+    print(f"Precio: {producto1.obtener_precio()}")
+    print(f"Stock disponible: {producto1.obtener_stock_disponible()}")
+    a=int(input("Presione 1 para aumentar el stock o 2 para disminuirlo: "))
+    if (a==1):
+        print(f"Stock disponible: {producto1.aumentar_stock()}")
+    if(a==2):
+        print(f"Stock disponible: {producto1.disminuir_stock()}")
+   
