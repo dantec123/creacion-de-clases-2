@@ -1,0 +1,19 @@
+class tienda:
+    def __init__(self,nombre,productos_disponibles):
+        self.nombre=nombre
+        self.productos_disponibles=productos_disponibles
+    
+    def obtener_nombre(self):
+        return self.nombre
+    
+    def establecer_nombre(self,nombre):
+        self.nombre=nombre
+        
+    def obtener_productos(self):
+        return self.productos_disponibles
+    
+    def establecer_productos(self,productos_disponibles):
+        self.productos_disponibles=productos_disponibles
+    
+if __name__=="__main__":
+    tienda1=tienda("panaderia","pan",)
