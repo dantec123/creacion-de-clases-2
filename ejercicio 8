@@ -14,6 +14,16 @@ class tienda:
     
     def establecer_productos(self,productos_disponibles):
         self.productos_disponibles=productos_disponibles
+    def añadir(self):
+        
+    def eliminar(self):
+        
     
 if __name__=="__main__":
-    tienda1=tienda("panaderia","pan",)
+    tienda1=tienda("panaderia",["pan","agua","queso","leche"])
+    print(f"Nombre: {tienda1.obtener_nombre()}")
+    print(f"Productos disponibles: {tienda1.obtener_productos()}")
+    op=1
+    while(op!=3):
+        op=int(input("Ingrese un numero:"))
+    
