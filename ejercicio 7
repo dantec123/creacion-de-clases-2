@@ -1,22 +1,33 @@
-class banco:
-    def __init__(self,nombre,tasa_de_interes):
-        self.nombre=nombre
-        self.tasa_de_interes=tasa_de_interes
-    
+class Banco:
+    def __init__(self, nombre, tasa):
+        self.nombre = nombre
+        self.tasa = tasa 
+
     def obtener_nombre(self):
         return self.nombre
-    
-    def establecer_nombre(self,nombre):
-        self.nombre=nombre
-        
+
+    def establecer_nombre(self, nombre):
+        self.nombre = nombre
+
     def obtener_tasa(self):
-        return self.tasa_de_interes
-    
-    def establecer_tasa(self,tasa_de_interes):
-        self.tasa_de_interes=tasa_de_interes
-    
-if __name__=="__main__":
-    banco1=banco("Banco ciudad",10)
+        return self.tasa
+
+    def establecer_tasa(self, tasa):
+        self.tasa = tasa
+
+    def calcular_interes(self, cantidad):
+        return round(cantidad * (self.tasa / 100), 2)
+
+    def duplicar(self):
+        if (self.tasa > 0):
+            return round(72 / self.tasa, 2)  
+
+
+if __name__ == "__main__":
+    banco1 = Banco("Banco Ciudad", 10)  # 10% anual
+    cantidad = 10000
+
     print(f"Nombre: {banco1.obtener_nombre()}")
-    print(f"Tasa de interes: {banco1.obtener_tasa()}")
-    
+    print(f"Tasa de interés: {banco1.obtener_tasa()}%")
+    print(f"Interés anual por ${cantidad}: ${banco1.calcular_interes(cantidad)}")
+    print(f"Años para duplicar el dinero: {banco1.duplicar()}")
