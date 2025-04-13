@@ -1,29 +1,52 @@
-class tienda:
-    def __init__(self,nombre,productos_disponibles):
-        self.nombre=nombre
-        self.productos_disponibles=productos_disponibles
+class Tienda:
+    def __init__(self, nombre, productos_disponibles):
+        self.nombre = nombre
+        self.productos_disponibles = productos_disponibles
     
     def obtener_nombre(self):
         return self.nombre
     
-    def establecer_nombre(self,nombre):
-        self.nombre=nombre
+    def establecer_nombre(self, nombre):
+        self.nombre = nombre
         
     def obtener_productos(self):
         return self.productos_disponibles
     
-    def establecer_productos(self,productos_disponibles):
-        self.productos_disponibles=productos_disponibles
-    def añadir(self):
-        
-    def eliminar(self):
-        
+    def establecer_productos(self, productos_disponibles):
+        self.productos_disponibles = productos_disponibles
     
-if __name__=="__main__":
-    tienda1=tienda("panaderia",["pan","agua","queso","leche"])
+    def añadir(self, producto):
+        self.productos_disponibles.append(producto)
+    
+    def eliminar(self, producto):
+        if producto in self.productos_disponibles:
+            self.productos_disponibles.remove(producto)
+
+if __name__ == "__main__":
+    tienda1 = Tienda("supermercado", ["pan", "agua", "queso", "leche"])
     print(f"Nombre: {tienda1.obtener_nombre()}")
-    print(f"Productos disponibles: {tienda1.obtener_productos()}")
-    op=1
-    while(op!=3):
-        op=int(input("Ingrese un numero:"))
     
+    opcion = 1
+    while opcion != 3:
+        
+        print(f"\nProductos disponibles: {tienda1.obtener_productos()}")
+        
+        print("\nSeleccione una opción:")
+        print("1. Añadir producto")
+        print("2. Eliminar producto")
+        print("3. Salir")
+        opcion = int(input("Ingrese un número: "))
+        
+        if opcion == 1:
+            producto = input("Ingrese el nombre del producto que desea añadir: ")
+            tienda1.añadir(producto)
+        
+        elif opcion == 2:
+            producto = input("Ingrese el nombre del producto que desea eliminar: ")
+            tienda1.eliminar(producto)
+        
+        elif opcion == 3:
+            print("fin del programa")
+        else:
+            print("Opción invalida.")
+
