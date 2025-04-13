@@ -1,34 +1,49 @@
-class libro:
-    def __init__(self,titulo,autor,genero,numero_paginas):
-        self.titulo=titulo
-        self.autor=autor
-        self.genero=genero
-        self.numero_paginas=numero_paginas
-        
+class Libro:
+    def __init__(self, titulo, autor, genero, num_paginas):
+        self.titulo = titulo
+        self.autor = autor
+        self.genero = genero
+        self.num_paginas = num_paginas
+    
     def obtener_titulo(self):
         return self.titulo
     
-    def establecer_titulo(self,titulo):
-        self.titulo=titulo
-        
     def obtener_autor(self):
         return self.autor
     
-    def establecer_autor(self,autor):
-        self.autor=autor
-        
     def obtener_genero(self):
         return self.genero
     
-    def establecer_genero(self,genero):
-        self.genero=genero
-        
+    def obtener_num_paginas(self):
+        return self.num_paginas
     
-    def obtener_paginas(self):
-        return self.numero_paginas
+
+    def establecer_titulo(self, titulo):
+        self.titulo = titulo
     
-    def establecer_paginas(self,numero_paginas):
-        self.numero_paginas=numero_paginas
-        
-if __name__=="__main__":
-    libro1=libro()
+    def establecer_autor(self, autor):
+        self.autor = autor
+    
+    def establecer_genero(self, genero):
+        self.genero = genero
+    
+    def establecer_num_paginas(self, num_paginas):
+        self.num_paginas = num_paginas
+    
+    def es_ficcion(self):
+        if self.genero.lower() in ["distopía", "realismo magico", "ciencia ficción", "fantasía"]:
+            return True
+        return False
+
+if __name__ == "__main__":
+    libro1 = Libro("Harry potter y la piedra filosofal", "J.K Rowling", "Fantasía", 223)
+
+    print(f"Título: {libro1.obtener_titulo()}")
+    print(f"Autor: {libro1.obtener_autor()}")
+    print(f"Género: {libro1.obtener_genero()}")
+    print(f"Número de páginas: {libro1.obtener_num_paginas()}")
+    
+    if libro1.es_ficcion():
+        print(f"El libro '{libro1.obtener_titulo()}' es de ficción.")
+    else:
+        print(f"El libro '{libro1.obtener_titulo()}' no es de ficción.")
